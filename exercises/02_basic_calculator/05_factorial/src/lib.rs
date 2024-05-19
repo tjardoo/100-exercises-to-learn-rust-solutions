@@ -10,6 +10,15 @@
 //
 // Use only what you learned! No loops yet, so you'll have to use recursion!
 
+fn factorial(n: u32) -> u32 {
+    // factorial of n
+    if n == 0 {
+        1
+    } else {
+        n * factorial(n - 1)
+    }
+}
+
 #[cfg(test)]
 mod tests {
     use crate::factorial;
@@ -32,5 +41,10 @@ mod tests {
     #[test]
     fn fifth() {
         assert_eq!(factorial(5), 120);
+    }
+
+    #[test]
+    fn sixth() {
+        assert_eq!(factorial(6), 720);
     }
 }
