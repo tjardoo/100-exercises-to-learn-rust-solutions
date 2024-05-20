@@ -5,6 +5,7 @@ pub fn summary(ticket: Ticket) -> (Ticket, Summary) {
     (ticket, ticket.summary())
 }
 
+#[derive(Clone)]
 pub struct Ticket {
     pub title: String,
     pub description: String,
